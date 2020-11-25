@@ -1,161 +1,70 @@
-# VIT-SoftwareDev
-Live Programming Round: Software Engineer Role
+# Getting Started with Create React App
 
-Note: Test Submission instructions will be updated here at 4pm - check back here
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-Test Instructions & prerequisites:
+In the project directory, you can run:
 
-1. Be familiar with git and it’s commands.
-2. Have a development environment with any database and any REST/Chat client building utilities/frameworks pre-installed.
-3. Fork from github repository. 
-4. The problem statement and further instructions will be added to the README.md file and committed in the main repository. 
-5. During the round, commit into your repositories at least once an hour.
-6. Submit your solution as a pull request (Name of Pull Request should be your reg no.) with proper documentation to this repo.
+### `npm start`
 
-Further Instructions:
-1. Make sure the name of the pull request you submit starts with your registration number.
-2. The README.md in your repo must contain explanations/documentations to be able to describe your approach and progress.
-3. Your individual commits will be seen to track progress. Write commit messages appropriately.
-4. For any queries, contact us on recruitment@hitwicket.com. (We are available on Google Chat)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Summary:
-A chat service with a cricket game.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Level 1: Make a basic architecture for a chat service which will respond on certain commands and print out the game status for you. 
+### `npm test`
 
-A game mode of ‘PvE’ is to be made in the form of a match. The match lasts for an over. The user has to play every ball by writing a set of commands sent as chat messages. 1 batsman and 1 bowler ‘skill’ details will be provided. These skills determine the likelihood of an outcome of a played ball (basically a matchup prototype of that in Superstars).
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Level 2: Persist data in a database.
+### `npm run build`
 
-The user can choose a batsman from a set of batsmen before starting a match. The ‘PvE’ mode now lasts for 3 overs. Every over is bowled by a bowler corresponding to a predefined ‘bowling order’. 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Level 3: Add multiplayer support for the above game
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-The ‘PvP’ game mode.
-It will become a turn based game
-This should include 2 clients connecting to the same server, and run through the same 3 over match as mentioned in in level 2, with the following modifications:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Both innings of the match will be played. A target score set in the first innings will be chased in the second innings by the opponent. The user flow highlighted below will be followed for both innings:
-Bowling client will select a ball to bowl while the batting client waits for this selection. Once ball is selected, Batting client will get the options for the shot (same as in Level 1)
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Expectations and what will you be graded on:
-Modular, scalable code.
-Well structured code and folder structure.
-Handling exceptions and edge cases gracefully. 
+## Learn More
 
-Tables: https://docs.google.com/spreadsheets/d/1UdcmcUPb-62olm6LGgG1d_8o0eLcaDAwPQc_vbx_ohY/edit?usp=sharing
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Probability Formula:
+### Code Splitting
 
-Probability of shot  = (((shot_modifier - ball_modifier) * 100) / shot_modifier)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Effect of Player Type:
+### Analyzing the Bundle Size
 
-Batsmen and bowlers both will have a playing style, namely passive and aggressive. The following boosts are to be applied on the shot and ball modifiers:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Passive Batting: 20% boost to shot modifier for all shots that award 0,1,2 runs
-Aggressive Batting: 20% boost to shot modifier for all shots that award 4,6 runs
+### Making a Progressive Web App
 
-Passive Bowling: 20% boost to ball modifiers for Slower Ball, Bouncer, and Out-swinger
-Aggressive Bowling: 20% boost to ball modifiers for Full Toss, Yorker and In-swinger
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Flow of the game:
+### Advanced Configuration
 
-PvE (Player vs Enemy game mode)
-After the mode select is pressed, User should get a random generated bowler/ list of bowlers (Including passive and aggressive) he is going to face, and then choose the batsman the user wants to use (passive or aggressive).
-Once the selection is done, the match starts and the player faces any random ball (mentioned in the tables above), and the possible shots for the random ball are to be listed from the table given above, with the shot success probability calculated and listed in front of them.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-The UI should look something like this:
+### Deployment
 
-Current Runs: 0
-Runs on last ball: 0
-Current Ball : (Ball name)
-Possible Shots: 
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Choose a shot: <Waits for user response>
+### `npm run build` fails to minify
 
-Now the server waits for an input from the user to choose a shot (Input should be the shot name), and it will reply if the shot was a success or a miss (Calculated by the probability formula provided) and it’ll proceed to show the next ball (randomly selected by server) in a UI something like this:
-
-*YOU HIT A (Number of runs)* OR *You missed”
-
-Current Runs: (number of runs)
-Runs on last ball: (outcome of last ball)
-Current Ball : (Ball name)
-Possible Shots: 
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-(shot_name) - (runs) - (probability)
-
-Choose a shot: <Waits for user response>
-
-Once the used has played the over/overs his final score should be printed out
-
-
-PvP (Player vs Player game mode)
-Similar to PvE with the follow changes in user-flow:
-
-Player 1 starts PvP mode and is asked to wait for Player 2 to connect. Player 2 then connects to the server, selects PvP mode and the match starts automatically.  
-
-[This UI only serves the purpose of a reference]
-
-Server: “Select a game mode (PvP/PvE)”
-Client #1’s Input: PvP
-
-Server: “Waiting for an opponent...”
-
-[Client #2 connects, selects PvP mode]
-
-Server: “Opponent found, match starting in 3...2…1”
-.
-.
-
-
-
-
-During match
-
-For the bowling client, the UI should look something like this:
-
-“First Innings, Player 1 has to set a target score”
-Current Runs: 0
-Runs on last ball: 0
-Balls: 
-Full toss,
-Yorker,
-Out-swinger,
-In-swinger,
-Bouncer,
-Slower Ball
-
-Choose a ball: <Waits for user response>
-
-Input should be Ball name
-
-After having chosen the ball, the server responds with a message to wait while the other player finishes their turn.
- 
-“First Innings, Player 1 has to set a target score”
-Current Runs: 0
-Runs on last ball: 0
-Current Ball : *the ball that you selected*
-Waiting for the opponent to play their turn . . .
-
-For the batting client, the UI should look something like this:
-
-[same as level 1 and 2’s batting UI]
-
-For the second innings, display the target score which is to be chased by Player 2. 
-
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
